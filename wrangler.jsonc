@@ -1,0 +1,22 @@
+{
+  "$schema": "https://developers.cloudflare.com/workers/wrangler/configuration-schema.json",
+  "name": "pei-compromiso-worker",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-01-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pei-compromiso-db",
+      "database_id": "bbd2abad-e6ef-4a88-a2ac-b0b2cc0db4bb",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

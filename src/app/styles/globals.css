@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;      /* #F6F8FC */
+    --foreground: 215 50% 18%;      /* #172B45 */
+
+    --card: 0 0% 100%;              /* #FFFFFF */
+    --card-foreground: 215 50% 18%; /* #172B45 */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 18%;
+
+    --primary: 210 76% 30%;         /* #124B87 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 214 32% 91%;       /* #E2E8F0 */
+    --secondary-foreground: 215 50% 18%;
+
+    --muted: 215 20% 65%;
+    --muted-foreground: 215 15% 47%;/* #66768A */
+
+    --accent: 40 59% 61%;           /* #D6AD60 Dorado */
+    --accent-foreground: 215 50% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;          /* #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 210 76% 30%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  html, body {
+    overflow-x: hidden;
+    /* Prevent scroll horizontal on any viewport */
+  }
+  body {
+    @apply bg-brand-light text-brand-text;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Allow natural vertical scroll; prevent horizontal overflow */
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  /* Prevent iOS auto-zoom on focus (font-size must be >= 16px in inputs) */
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* Ceremonial Dark theme utility */
+.theme-ceremony {
+  background-color: #09264A;
+  color: #FFFFFF;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+.theme-ceremony ::-webkit-scrollbar-thumb {
+  background: #1E3A5F;
+}
+
+/* Animaciones ceremoniales del mural */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes pulse-milestone {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-milestone {
+  animation: pulse-milestone 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

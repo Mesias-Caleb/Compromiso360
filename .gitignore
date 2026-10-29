@@ -1,0 +1,52 @@
+# ─── Dependencias ─────────────────────────────────────────
+node_modules/
+
+# ─── Build / salida ───────────────────────────────────────
+dist/
+build/
+coverage/
+*.zip
+
+# ─── Wrangler / D1 local ──────────────────────────────────
+.wrangler/
+*.sqlite
+*.sqlite-journal
+
+# ─── Variables de entorno (secretos locales, no subir a git) ───
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.dev.vars
+
+# ─── Plantillas de entorno (SÍ subir: valores sin secretos) ───
+# .env.example
+# .dev.vars.example
+
+# ─── Logs ─────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─── IDE ──────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*.orig
+
+# ─── Sistema operativo ────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── TypeScript ───────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Otros ────────────────────────────────────────────────
+playwright-report/
+playwright/.cache/
+zone.js/
+.nyc_output/

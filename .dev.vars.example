@@ -1,0 +1,11 @@
+# --- Variables solo para el Worker (no expuestas al frontend) ---
+# Valores de ejemplo NO sensibles. Reemplazar con valores reales antes del despliegue.
+
+# Hash PBKDF2 de la contraseña de administrador (generar de forma segura)
+ADMIN_PASSWORD_HASH=tu_hash_pbkdf2_aqui_base64
+
+# Salt PBKDF2 para la contraseña de administrador
+ADMIN_PASSWORD_SALT=tu_salt_pbkdf2_aqui_base64
+
+# Secreto para firma de sesiones (opcional, se deriva del hash)
+SESSION_SECRET=tu_secreto_de_sesiones_aqui
